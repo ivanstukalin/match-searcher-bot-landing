@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Padel Radar — бот для поиска слотов на падел</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+          content="Padel Radar собирает все слоты на падел из клубов, чатов и объявлений. Открывайте бота в Telegram и находите игру за секунды.">
+
+    <!-- Шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<div class="page">
+    <main class="sections-wrapper">
+
+        <!-- HERO -->
+        <section class="card card-hero">
+            <div class="card-inner card-inner--center">
+
+                <h1 class="hero-title">
+                    Играйте больше.<br>
+                    Скроллите меньше.
+                </h1>
+
+                <p class="hero-subtitle">
+                    Все слоты на падел уже собраны для вас<br>
+                    в одном консьерже.
+                </p>
+
+                <p class="hero-small">
+                    Padel Radar сам собирает свободные слоты, игры<br>
+                    «нужен 4-й», турниры и объявления от клубов и<br>
+                    Telegram-чатов — и показывает только лучшее.
+                </p>
+
+                <a class="btn-primary tg-btn">
+                    Открыть в Telegram
+                </a>
+            </div>
+        </section>
+
+        <!-- БЛОК С ТЕЛЕФОНОМ -->
+        <section class="card card-phone">
+            <div class="card-inner card-inner--phone">
+
+                <div class="card-phone-text">
+                    <h2 class="section-title">
+                        Больше<br>не нужно<br>листать<br>сайты и чаты.
+                    </h2>
+
+                    <p class="section-text">
+                        Вы видите только то, что важно — слоты<br>
+                        по вашим фильтрам, без лишнего шума.
+                    </p>
+
+                    <p class="section-small">
+                        Бот обновляет все доступные слоты<br>
+                        раз в несколько минут и собирает их<br>
+                        в один удобный список.
+                    </p>
+                </div>
+
+                <div class="card-phone-image">
+                    <div class="phone-frame">
+                        <img src="img/phone.png" alt="Интерфейс Padel Radar">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ПОЧЕМУ PADel RADAR -->
+        <section class="card card-features">
+            <div class="card-inner card-inner--center">
+
+                <h2 class="section-title section-title--center">
+                    Почему Padel Radar —<br>
+                    лучший способ искать<br>
+                    слоты на падел
+                </h2>
+
+                <div class="features-grid">
+
+                    <div class="feature">
+                        <div class="feature-icon">☀️</div>
+                        <div class="feature-title">Все слоты в одном месте</div>
+                        <p class="feature-text">
+                            Клубы, чаты и объявления<br>
+                            собираются в одном потоке.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">⏱</div>
+                        <div class="feature-title">Фильтр по времени</div>
+                        <p class="feature-text">
+                            Выбирайте удобное время игры.<br>
+                            Бот показывает только подходящие.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">📍</div>
+                        <div class="feature-title">Фильтр по локации</div>
+                        <p class="feature-text">
+                            Показываем только клубы<br>
+                            рядом или в нужном районе.
+                        </p>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">🔔</div>
+                        <div class="feature-title">Уведомления</div>
+                        <p class="feature-text">
+                            Новые слоты приходят<br>
+                            моментально в Telegram.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="card card-cta">
+            <div class="card-inner card-inner--center">
+
+                <h2 class="section-title section-title--center">
+                    Один бот.<br>
+                    Все корты.
+                </h2>
+
+                <p class="section-text section-text--center">
+                    Ваши слоты на падел — за секунды.
+                </p>
+
+                <a class="btn-primary tg-btn">
+                    Открыть в Telegram
+                </a>
+
+                <button class="btn-ghost">
+                    Посмотреть полный<br>список кортов
+                </button>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- ===== JS: определение устройства и подстановка ссылки ===== -->
+<script>
+    const tgButtons = document.querySelectorAll(".tg-btn");
+
+    const mobileLink = "tg://resolve?domain=Padel_slot_Finder_bot&start";
+    const webLink = "https://t.me/Padel_slot_Finder_bot?start";
+
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    tgButtons.forEach(btn => {
+        btn.setAttribute("href", isMobile ? mobileLink : webLink);
+    });
+</script>
+
+</body>
+</html>

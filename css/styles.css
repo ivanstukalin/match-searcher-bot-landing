@@ -1,0 +1,254 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f2f0ff;
+    color: #222222;
+}
+
+/* Общий контейнер страницы */
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+}
+
+/* Вертикальный "мобильный" лэйаут */
+.sections-wrapper {
+    width: 100%;
+    max-width: 420px;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Базовая карточка-секция */
+.card {
+    border-radius: 28px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Внутренние отступы в секциях */
+.card-inner {
+    padding: 26px 22px 28px;
+}
+
+/* Выравнивание контента по центру */
+.card-inner--center {
+    text-align: center;
+}
+
+/* ===== ГРАДИЕНТЫ СЕКЦИЙ ===== */
+
+.card-hero {
+    background: linear-gradient(180deg, #fff3e8 0%, #f1e9ff 100%);
+}
+
+.card-phone {
+    background: linear-gradient(180deg, #ffece7 0%, #f7f0ff 100%);
+}
+
+.card-features {
+    background: linear-gradient(180deg, #fdf3ff 0%, #f1f8ff 100%);
+}
+
+.card-cta {
+    background: linear-gradient(180deg, #fff3e8 0%, #f1e9ff 100%);
+}
+
+/* ===== ТЕКСТ ===== */
+
+.hero-title {
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 700;
+    margin: 0 0 14px;
+}
+
+.hero-subtitle {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0 0 14px;
+}
+
+.hero-small {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0 0 22px;
+}
+
+.section-title {
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 700;
+    margin: 0 0 14px;
+}
+
+.section-title--center {
+    text-align: center;
+}
+
+.section-text {
+    font-size: 13px;
+    line-height: 1.45;
+    color: #333333;
+    margin: 0 0 10px;
+}
+
+.section-text--center {
+    text-align: center;
+}
+
+.section-small {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+}
+
+/* ===== КНОПКИ ===== */
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 26px;
+    border-radius: 999px;
+    border: none;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(90deg, #4c6fff 0%, #6f8dff 100%);
+    box-shadow: 0 8px 18px rgba(78, 104, 255, 0.45);
+    cursor: pointer;
+    transition: transform 0.08s ease-out, box-shadow 0.08s ease-out, filter 0.08s ease-out;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.03);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(78, 104, 255, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(78, 104, 255, 0.4);
+}
+
+.btn-ghost {
+    margin-top: 14px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 9px;
+    line-height: 1.4;
+    color: #666666;
+    background: #ffffffc0;
+    cursor: pointer;
+}
+
+/* ===== БЛОК С ТЕЛЕФОНОМ ===== */
+
+.card-inner--phone {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.card-phone-text {
+    text-align: left;
+}
+
+.card-phone-image {
+    display: flex;
+    justify-content: center;
+}
+
+.phone-frame {
+    width: 180px;
+    border-radius: 32px;
+    padding: 8px;
+    background: radial-gradient(circle at top, #ffffff 0%, #c4c4c4 55%, #000000 100%);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+.phone-frame img {
+    width: 100%;
+    display: block;
+    border-radius: 26px;
+}
+
+/* ===== ФИЧИ ===== */
+
+.features-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 10px 10px 12px;
+    text-align: left;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+}
+
+.feature-icon {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.feature-title {
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.feature-text {
+    font-size: 9px;
+    line-height: 1.45;
+    color: #555555;
+    margin: 0;
+}
+
+/* ===== АДАПТИВ ДЛЯ ШИРОКИХ ЭКРАНОВ ===== */
+
+@media (min-width: 768px) {
+    .page {
+        padding: 40px 0;
+    }
+
+    .sections-wrapper {
+        max-width: 480px;
+    }
+
+    .card-inner--phone {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-phone-text {
+        flex: 1;
+    }
+
+    .card-phone-image {
+        flex: 1;
+    }
+}
