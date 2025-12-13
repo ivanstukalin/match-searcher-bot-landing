@@ -287,9 +287,16 @@ body {
 }
 
 .seo-text {
-    position: absolute;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+    margin-top: 18px;
+    padding: 0 4px 6px;
+    font-size: 12px;
+    line-height: 1.55;
+    color: rgba(0,0,0,0.55);
+}
+
+.seo-text h2 {
+    font-size: 14px;
+    margin: 0 0 6px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.75);
 }
